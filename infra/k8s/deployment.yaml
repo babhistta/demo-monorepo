@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-api
+  template:
+    metadata:
+      labels:
+        app: demo-api
+    spec:
+      hostNetwork: true
+      containers:
+        - name: api
+          image: demo/api:latest
+          securityContext:
+            privileged: true
+            allowPrivilegeEscalation: true
+          ports:
+            - containerPort: 8080

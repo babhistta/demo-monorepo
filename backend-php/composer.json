@@ -1,0 +1,12 @@
+{
+    "name": "demo/backend-php",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "7.4.0"
+    },
+    "require-dev": {
+        "twig/twig": "3.4.2"
+    }
+}
